@@ -1,0 +1,33 @@
+Load balancers play a crucial role in enhancing the performance and reliability of applications hosted in the AWS cloud. AWS offers multiple types of load balancers to accommodate different use cases and requirements. Here are the primary load balancers provided by AWS:
+ 
+ 
+![Load balaner](https://images.app.goo.gl/2o8ZLuQVUsTWeBL46)
+
+
+# Elastic Load Balancing # :
+Elastic Load Balancing is the primary service for load balancing on AWS and includes three types of load balancers:
+
+**Application Load Balancer **:
+
+ALB operates at the application layer (Layer 7) and is used to route HTTP and HTTPS traffic. It offers advanced features such as content-based routing, host-based routing, and integration with AWS Web Application Firewall (WAF) for enhanced security.
+
+![Application Load balaner](https://images.app.goo.gl/fkKzhycLFGorMXC77)
+
+
+**b. Network Load Balancer** : 
+NLB operates at the transport layer (Layer 4) and is used for routing TCP and UDP traffic. It is designed for high performance and low-latency workloads.
+
+**c. Classic Load Balancer**:
+The Classic Load Balancer is the legacy load balancer service and is less feature-rich compared to ALB and NLB. It works at both the application and transport layers.
+
+AWS Global Accelerator: AWS Global Accelerator is a service that provides a global anycast IP address to route traffic over AWS's global network to endpoints in multiple AWS regions. It is designed to improve application availability and performance by automatically directing traffic to the closest healthy resource.
+
+__Key features of AWS Load Balancers include__
+
+          1. Health Checks: Load balancers perform health checks on registered instances or resources and route traffic only to healthy ones. Unhealthy instances are automatically detected and bypassed.
+          2. Security: Load balancers support SSL termination, allowing for secure communication with clients. Application Load Balancers can also be integrated with AWS WAF for additional security.
+          3. Content-Based Routing: Application Load Balancers offer advanced routing capabilities based on content and URL patterns, making them suitable for complex application architectures.
+          4. Scaling: Load balancers can work in conjunction with AWS Auto Scaling to automatically adjust the number of instances based on traffic patterns.
+          5. Monitoring and Logging: AWS provides tools like AWS CloudWatch for monitoring load balancer metrics and AWS CloudTrail for auditing load balancer activity.
+
+ AWS Load Balancers are a critical component of building scalable, resilient, and high-performance applications on the AWS cloud. They help ensure that traffic is evenly distributed among application resources, improving application reliability and responsiveness.
