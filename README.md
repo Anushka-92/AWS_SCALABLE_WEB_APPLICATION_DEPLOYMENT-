@@ -1,21 +1,14 @@
-# AWS_SCALABLE_WEB_APPLICATION_DEPLOYMENT-
-To ensure high availability and performance of any application on AWS using autoscaling and a load balancer is a approach of this project.
 
-Amazon Web Services (AWS) offers multiple load balancing services to help distribute incoming traffic across multiple resources for improved availability, fault tolerance, and scalability.
+Amazon Web Services (AWS) offers multiple load balancing services to help distribute incoming traffic across multiple resources for improved availability, fault tolerance, and scalability. Here are some key load balancing services provided by AWS:
 
-We can create different target groups with different number of instances in it depending upon requirements. For ex: for online shopping application like myntra by analysing user traffic if there are less traffic on payment option then we can use less number of instances working for that target group particulary. Along with this if there is high traffic observed wishlist page or user login then we can effortlessly increase and use more instances for those target groups.
+Elastic Load Balancing (ELB):
+AWS Elastic Load Balancing service includes three different types of load balancers as follows:
 
+a. Application Load Balancer (ALB):
+ALB is a Layer 7 load balancer that operates at the application layer. It is ideal for routing HTTP/HTTPS traffic and provides advanced features like content-based routing, host-based routing, and integration with AWS WAF for web application security.
 
-**STEP 1: CREATION OF TARGET GROUP**
+b. Network Load Balancer (NLB):
+NLB is a Layer 4 load balancer that operates at the transport layer. It is designed to handle TCP and UDP traffic, making it suitable for protocols other than HTTP/HTTPS. It is used when you need ultra-high performance and low latency.
 
-
-**STEP 2: CREATION OF APPLICATION LOAD BALANCER**
-
-
-**STEP 3: CONFIGURATION OF RULES IN ALB**
-
-
-**STEP 4: EC2 INSTANCE LAUNCHING USING TEMPLATE WITH USER DATA**
-
-
-**STEP 5: CREATE AUTO SCALING GROUP**
+c. Classic Load Balancer:
+The Classic Load Balancer is the legacy load balancer offered by AWS. It is a basic load balancer suitable for simple use cases but doesn't have all the features of ALB and NLB.
