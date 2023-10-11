@@ -1,5 +1,7 @@
 AWS Auto Scaling is a service provided by Amazon Web Services (AWS) that enables you to automatically adjust the number of compute resources within your application in response to changes in demand. It helps ensure your application can handle varying levels of traffic and maintain a balance between performance, cost, and availability. Here are the key aspects of AWS Auto Scaling:
 
+![Auto Scaling]("https://images.app.goo.gl/6gYGJwRFrJJhNWRNA")
+
 **1. Scaling Policies:**
    AWS Auto Scaling allows you to create scaling policies that define the conditions under which new instances are launched or existing instances are terminated. These policies can be based on various metrics, including CPU utilization, network traffic, or custom CloudWatch alarms.
 
