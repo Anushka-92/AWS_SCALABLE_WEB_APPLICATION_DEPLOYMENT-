@@ -1,5 +1,6 @@
 
-AWS_SCALABLE_WEB_APPLICATION_DEPLOYMENT-
+# AWS_SCALABLE_WEB_APPLICATION_DEPLOYMENT -
+
 To ensure high availability and performance of any application on AWS using autoscaling and a load balancer is a approach of this project.
 
 Amazon Web Services (AWS) offers multiple load balancing services to help distribute incoming traffic across multiple resources for improved availability, fault tolerance, and scalability.
