@@ -30,42 +30,43 @@ Amazon Redshift (Data Warehouse - OLAP)`
 
 🧰 Services Used
 
-Amazon EC2
-Application Load Balancer (ALB)
-Auto Scaling Group (ASG)
-Amazon S3
-Amazon Redshift
-IAM (Identity and Access Management)
-CloudWatch (Monitoring)
+-Amazon EC2
+-Application Load Balancer (ALB)
+-Auto Scaling Group (ASG)
+-Amazon S3
+-Amazon Redshift
+-IAM (Identity and Access Management)
+-CloudWatch (Monitoring)
 
 🚀 Implementation Steps:
 
 1️⃣ Web Application Deployment
 
-Launched EC2 instance (Amazon Linux)
-Installed Apache Web Server
-Hosted sample web application
-Created AMI from configured instance
+-Launched EC2 instance (Amazon Linux)
+-Installed Apache Web Server
+-Hosted sample web application
+-Created AMI from configured instance
 
 2️⃣ Load Balancer Configuration
 
-Created Application Load Balancer (Layer 7 - HTTP)
-Created Target Group
-![targetGroups](Images\targetGroups.png)
-Attached EC2 instances to Target Group
-Enabled health checks
-![ALB](Images\ALB.png)
+-Created Application Load Balancer (Layer 7 - HTTP)
+-Created Target Group
+![targetGroups](Images/targetGroups.png)
+
+-Attached EC2 instances to Target Group
+-Enabled health checks
+![ALB](Images/ALB.png)
 Purpose:
 
-Distribute incoming traffic
-Improve fault tolerance
+~Distribute incoming traffic
+~Improve fault tolerance
 
 3️⃣ Auto Scaling Setup
 
-Created Launch Template using custom AMI
-Configured Auto Scaling Group
-Deployed instances across multiple Availability Zones
-Configured Target Tracking Scaling Policy (CPU-based)
+-Created Launch Template using custom AMI
+-Configured Auto Scaling Group
+-Deployed instances across multiple Availability Zones
+-Configured Target Tracking Scaling Policy (CPU-based)
 
 ![auto scaling group](Images\auto scaling group.png)
 
@@ -75,7 +76,7 @@ Minimum instances: 2
 Desired instances: 2
 Maximum instances: 4
 Target CPU Utilization: 60%
-![3 Instances are alway runnig](Images\Instances.png)
+![3 Instances are alway runnig](Images/Instances.png)
 Purpose:
 
 Elastic scaling
@@ -84,15 +85,15 @@ Automatic failure recovery
 
 4️⃣ Data Storage Using S3
 
-Created S3 bucket for application logs
-Uploaded structured CSV data
-Used S3 as staging area for ETL process
+-Created S3 bucket for application logs
+-Uploaded structured CSV data
+-Used S3 as staging area for ETL process
 
 Purpose:
 
-Durable storage (11 9’s durability)
-Cost-effective object storage
-Decoupled storage layer
+~Durable storage (11 9’s durability)
+~Cost-effective object storage
+~Decoupled storage layer
 
 5️⃣ Data Warehouse Setup (Amazon Redshift)
 
@@ -133,23 +134,23 @@ Efficient analytical processing
 
 7️⃣ Monitoring & Optimization
 
-Monitored CPU utilization using CloudWatch
-Validated scaling behavior under simulated load
-Verified Target Group health status
-Optimized query performance using:
+-Monitored CPU utilization using CloudWatch
+-Validated scaling behavior under simulated load
+-Verified Target Group health status
+-Optimized query performance using:
 
 1.DISTKEY 2.SORTKEY  3.ANALYZE  4.VACUUM
 
 🎯 Key Concepts Demonstrated
 
-High Availability (Multi-AZ deployment)
-Fault Tolerance
-Elastic Scalability
-Load Balancing (Layer 7)
-Immutable Infrastructure (AMI-based deployment)
+-High Availability (Multi-AZ deployment)
+-Fault Tolerance
+-Elastic Scalability
+-Load Balancing (Layer 7)
+-Immutable Infrastructure (AMI-based deployment)
 
 OLAP vs OLTP
-![OLAP vs OLTP](Images\OLAP vs OLTP.png)
+![OLAP vs OLTP](Images/OLAP vs OLTP.png)
 ETL Pipeline Design
 
 📊 Why Redshift?
@@ -173,28 +174,21 @@ Principle of least privilege followed
 
 📈 Future Enhancements
 
-Implement Concurrency Scaling
-Use Redshift Spectrum for querying S3 directly
-Implement lifecycle policies in S3
-Add CloudWatch alarms for automated alerting
-Integrate CI/CD for automated AMI updates
+-Implement Concurrency Scaling
+-Use Redshift Spectrum for querying S3 directly
+-Implement lifecycle policies in S3
+-Add CloudWatch alarms for automated alerting
+-Integrate CI/CD for automated AMI updates
 
 🧠 What I Learned
 
-Designing scalable cloud architectures
-Implementing Auto Scaling policies
-Understanding ALB routing mechanisms
-Working with ETL pipelines
-Optimizing analytical queries in Redshift
-Implementing secure IAM configurations
-Monitoring production-like workloads
+-Designing scalable cloud architectures
+-Implementing Auto Scaling policies
+-Understanding ALB routing mechanisms
+-Working with ETL pipelines
+-Optimizing analytical queries in Redshift
+-Implementing secure IAM configurations
+-Monitoring production-like workloads
 
 👩‍💻 Author
-
 Anushka Pawar
-Cloud & Database Enthusiast
-
-⭐ Final Outcome
-
-This project simulates a real-world scalable web application with integrated analytics pipeline and demonstrates practical understanding of cloud-native architecture design principles.
-
