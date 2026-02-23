@@ -51,11 +51,14 @@ Amazon Redshift (Data Warehouse - OLAP)`
 
 -Created Application Load Balancer (Layer 7 - HTTP)
 -Created Target Group
+
 ![targetGroups](Images/targetGroups.png)
 
 -Attached EC2 instances to Target Group
 -Enabled health checks
+
 ![ALB](Images/ALB.png)
+
 Purpose:
 
 ~Distribute incoming traffic
@@ -76,7 +79,9 @@ Minimum instances: 2
 Desired instances: 2
 Maximum instances: 4
 Target CPU Utilization: 60%
+
 ![3 Instances are alway runnig](Images/Instances.png)
+
 Purpose:
 
 Elastic scaling
@@ -150,7 +155,10 @@ Efficient analytical processing
 -Immutable Infrastructure (AMI-based deployment)
 
 OLAP vs OLTP
-![OLAP vs OLTP](Images/OLAP vs OLTP.png)
+C:\Users\Anurag\Desktop\dev_project\proj3\AWS_SCALABLE_WEB_APPLICATION_DEPLOYMENT-\Images\
+
+![OLAP vs OLTP](Images/OLAPvsOLTP.png)
+
 ETL Pipeline Design
 
 📊 Why Redshift?
@@ -192,3 +200,4 @@ Principle of least privilege followed
 
 👩‍💻 Author
 Anushka Pawar
+
