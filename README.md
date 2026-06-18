@@ -4,29 +4,14 @@ This project demonstrates the design and deployment of a highly available and sc
 
 *The architecture ensures*
 
--> High Availability
--> Fault Tolerance
--> Elastic Scaling
--> Secure Data Access
--> Optimized Analytical Processing
+* High Availability
+* Fault Tolerance
+* Elastic Scaling
+* Secure Data Access
+* Optimized Analytical Processing
 
-🏗️ Architecture Diagram
-` Users
-   |
-   v
-Application Load Balancer (ALB)
-   |
-   v
-Auto Scaling Group (EC2 Instances across Multi-AZ)
-   |
-   v
-Application Logs / Data
-   |
-   v
-Amazon S3 (Staging Layer)
-   |
-   v
-Amazon Redshift (Data Warehouse - OLAP) `
+🏗️ Architecture Diagram::
+Users---->Application Load Balancer (ALB)----->Auto Scaling Group (EC2 Instances across Multi-AZ)----->Application Logs / Data------>Amazon S3 (Staging Layer)---->Amazon Redshift (Data Warehouse - OLAP) 
 
 🧰 Services Used
 
@@ -61,8 +46,8 @@ Amazon Redshift (Data Warehouse - OLAP) `
 
 Purpose:
 
-~ Distribute incoming traffic
-~ Improve fault tolerance
+1. Distribute incoming traffic
+2. Improve fault tolerance
 
 3️⃣ Auto Scaling Setup
 
@@ -75,18 +60,18 @@ Purpose:
 
 Scaling Configuration:
 
-Minimum instances: 2
-Desired instances: 2
-Maximum instances: 4
-Target CPU Utilization: 60%
+- Minimum instances: 2
+- Desired instances: 2
+- Maximum instances: 4
+- Target CPU Utilization: 60%
 
 ![3 Instances are alway runnig](Images/Instances.png)
 
 Purpose:
 
-Elastic scaling
-High availability
-Automatic failure recovery
+1. Elastic scaling
+2. High availability
+3. Automatic failure recovery
 
 4️⃣ Data Storage Using S3
 
@@ -96,9 +81,9 @@ Automatic failure recovery
 
 Purpose:
 
-~ Durable storage (11 9’s durability)
-~ Cost-effective object storage
-~ Decoupled storage layer
+1. Durable storage (11 9’s durability)
+2. Cost-effective object storage
+3.  Decoupled storage layer
 
 5️⃣ Data Warehouse Setup (Amazon Redshift)
 
@@ -124,8 +109,8 @@ Optimization Strategy:
 
 6️⃣ ETL Implementation
 
-Uploaded CSV data to S3
-Loaded data into Redshift using COPY command:
+- Uploaded CSV data to S3
+- Loaded data into Redshift using COPY command:
 
 ` COPY app_logs
 FROM 's3://your-bucket-name/logs.csv'
@@ -134,8 +119,8 @@ FORMAT AS CSV; `
 
 Purpose:
 
-High-speed parallel data ingestion
-Efficient analytical processing
+1. High-speed parallel data ingestion
+2. Efficient analytical processing
 
 7️⃣ Monitoring & Optimization
 
